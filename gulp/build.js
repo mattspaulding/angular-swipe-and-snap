@@ -100,18 +100,12 @@ gulp.task('clean', function () {
 gulp.task('build', ['html', 'fonts', 'other']);
 
 
-gulp.task('release',['docs'], function() {
+gulp.task('release', function() {
   return gulp.src('src/app/angular-swipe-and-snap.js')
-    .pipe(concat('scripts.js'))
+    .pipe(concat('angular-swipe-and-snap.js'))
     .pipe(gulp.dest('dist'))
     .pipe(rename('angular-swipe-and-snap.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('release'));
+    .pipe(gulp.dest('dist'));
 });
 
-
-gulp.task('docs', function () {
-  return gulp.src(  path.join(conf.paths.src, '/**/*'))
-
-    .pipe(gulp.dest('docs'));
-});
