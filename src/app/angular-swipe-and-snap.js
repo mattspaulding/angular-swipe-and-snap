@@ -60,6 +60,10 @@
 
             // We dont want an animation delay when dragging.
             element.removeClass('animate');
+
+            // Brodcast dragstart
+            scope.$broadcast('dragstart');
+
           });
 
           /**
@@ -85,7 +89,8 @@
 
             element.css('-webkit-transform', 'translate3d(' + restPosition + 'px, 0px, 0px)');
 
-            scope.$broadcast('swipe-end', {snapLocation: restPosition});
+            // Broadcast dragend
+            scope.$broadcast('dragend', {snapLocation: restPosition});
           });
         }
       };
