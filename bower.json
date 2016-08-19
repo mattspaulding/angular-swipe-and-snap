@@ -1,6 +1,6 @@
 {
   "name": "angular-swipe-and-snap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "angular": "~1.5.3",
     "angular-hammer": "^1.2.4"
