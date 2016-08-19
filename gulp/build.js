@@ -102,8 +102,8 @@ gulp.task('build', ['html', 'fonts', 'other']);
 
 gulp.task('release',['docs'], function() {
   return gulp.src('src/app/angular-swipe-and-snap.js')
-    // .pipe(concat('scripts.js'))
-    // .pipe(gulp.dest('dist'))
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('dist'))
     .pipe(rename('angular-swipe-and-snap.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('release'));
