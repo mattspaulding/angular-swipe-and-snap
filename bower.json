@@ -1,5 +1,5 @@
 {
-  "name": "angularSwipeAndSnap",
+  "name": "angular-swipe-and-snap",
   "version": "0.1.0",
   "dependencies": {
     "angular": "~1.5.3",
