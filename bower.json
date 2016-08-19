@@ -1,7 +1,7 @@
 {
   "name": "angular-swipe-and-snap",
-  "version": "0.1.2",
-  "main": "dist/angular-swipe-and-snap.min.js",
+  "version": "0.2.0",
+  "main": "dist/angular-swipe-and-snap.js",
   "dependencies": {
     "angular": "~1.5.3",
     "angular-hammer": "^1.2.4"
