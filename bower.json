@@ -17,6 +17,9 @@
     "bower_components",
     "test",
     "package.json",
-    "src"
+    "src",
+    "gulp",
+    "e2e",
+    "docs"
   ]
 }
