@@ -106,7 +106,7 @@ gulp.task('release',['docs'], function() {
     // .pipe(gulp.dest('dist'))
     .pipe(rename('angular-swipe-and-snap.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('release'));
 });
 
 
