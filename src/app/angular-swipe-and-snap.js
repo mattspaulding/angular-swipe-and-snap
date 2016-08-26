@@ -8,7 +8,7 @@
         link: function (scope, element, attr) {
 
           var snapLocations = JSON.parse(attr.snapLocations),
-            restPosition = 0, // Define the location to end.
+            //restPosition = 0, // Define the location to end.
             positionX = 0; // The current position.
 
           /**
@@ -72,7 +72,7 @@
           Hammer(element[0]).on("drag", function (ev) {
 
             // Set the current position.
-            positionX = restPosition + parseInt(ev.gesture.deltaX);
+            positionX = parseInt(scope.restPos) + parseInt(ev.gesture.deltaX);
 
             element.css('-webkit-transform', 'translate3d(' + positionX + 'px,0px,0px)');
             element.css('transform', 'translate3d(' + positionX + 'px,0px,0px)');
@@ -85,15 +85,15 @@
             element.addClass('animate');
 
             // Work out where we should "snap" to.
-            restPosition = calculate_snap_location(positionX);
+            scope.restPos = calculate_snap_location(positionX);
 
-            element.css('-webkit-transform', 'translate3d(' + restPosition + 'px, 0px, 0px)');
+            element.css('-webkit-transform', 'translate3d(' + scope.restPos + 'px, 0px, 0px)');
 
             // Broadcast dragend
-            scope.$broadcast('dragend', {snapLocation: restPosition});
+            scope.$broadcast('dragend', {snapLocation: scope.restPos});
           });
         }
-      };
+      }
     });
 
 })();
